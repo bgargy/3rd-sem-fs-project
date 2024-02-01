@@ -1,6 +1,7 @@
 import React from "react";
 import GradientBtn from "./GradientBtn";
 
+
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
@@ -20,7 +21,7 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
     },
     {
       id: 4,
-      link: "contact",
+      link: "login",
     },
   ];
 
@@ -45,8 +46,9 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
                 </li>
               ))}
             </ul>
-            <GradientBtn className="ml-4 capitalize" title="BMSCE" />
-          </div>
+            <a href="https://www.bmsce.ac.in" target="_blank" rel="noopener noreferrer">
+          <GradientBtn className="ml-4 capitalize" title="BMSCE" />
+        </a>          </div>
 
           <div
             onClick={() => setIsMenuShown(!isMenuShown)}
@@ -75,7 +77,6 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
               </Link>
             </li>
           ))}
-          <GradientBtn className="mt-10 capitalize" title="BMSCE" />
         </ul>
       </div>
     </>

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Customers from "./components/Customers";
-import HeroSection from "./components/HeroSection";
+import Team from "./components/Team";
+import Home  from "./components/Home";
 import Navbar from "./components/Navbar";
-import Prodcuts from "./components/Prodcuts";
+import Features from "./components/Features";
 import Contact from "./components/Contact";
 
 
@@ -12,9 +12,9 @@ function App() {
   return (
     <div>
       <Navbar isMenuShown={isMenuShown} setIsMenuShown={setIsMenuShown} />
-      <HeroSection isMenuShown={isMenuShown} />
-      <Prodcuts />
-      <Customers />
+      <Home isMenuShown={isMenuShown} />
+      <Features />
+      <Team />
       <Contact />
 
     </div>

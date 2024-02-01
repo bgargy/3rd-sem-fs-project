@@ -1,7 +1,7 @@
 import React from "react";
 import PageSection from "./PageSection";
 
-const Customers = () => {
+const Team = () => {
   const facts = [
     {
       id: 1,
@@ -40,10 +40,10 @@ const Customers = () => {
           {facts.map(({ id, title, subtitle }) => (
             <div
               key={id}
-              className="odd:bg-thBlue even:bg-thOrange text-black p-4 rounded-lg"
+              className="odd:bg-thBlue even:bg-thOrange text-black p-4 rounded-lg shadow-md"
             >
-              <h1 className="text-3xl font-bold mb-2">{title}</h1>
-              <p>{subtitle}</p>
+              <h1 className="text-4xl lg:text-5xl font-bold mb-2">{title}</h1>
+              <p className="text-lg">{subtitle}</p>
             </div>
           ))}
         </div>
@@ -51,10 +51,10 @@ const Customers = () => {
         <div className="flex flex-col lg:flex-row items-center justify-around gap-6">
           {companies.map(({ id, title }) => (
             <div
-              className="flex items-center capitalize p-4 rounded-lg"
+              className="flex items-center capitalize p-4 rounded-lg shadow-md"
               key={id}
             >
-              <p className="ml-2">{title}</p>
+              <p className="ml-2 text-xl">{title}</p>
             </div>
           ))}
         </div>
@@ -63,4 +63,4 @@ const Customers = () => {
   );
 };
 
-export default Customers;
+export default Team;

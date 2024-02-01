@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import heroVideo from "../assets/heroVideo.mp4";
-import bmsceLogo from "../assets/bmsceLogo.png"; // Import the BMSCE logo image
+import bmsceLogo from "../assets/bmsceLogo.png"; 
 import GradientBtn from "./GradientBtn";
 
-const HeroSection = ({ isMenuShown }) => {
+const Home = ({ isMenuShown }) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const videoRef = useRef();
 
@@ -19,13 +19,7 @@ const HeroSection = ({ isMenuShown }) => {
 
   return (
     <div className="relative flex items-end justify-center w-full h-screen text-center">
-      <img
-        src={bmsceLogo}
-        alt="BMSCE Logo"
-        className="absolute top-8 left-8 h-16 w-16"
-      />
-
-      <video
+       <video
         ref={videoRef}
         src={heroVideo}
         autoPlay
@@ -33,6 +27,16 @@ const HeroSection = ({ isMenuShown }) => {
         muted
         className="object-cover h-full w-full absolute -z-10"
       />
+  <img
+  src={bmsceLogo}
+  alt="BMSCE Logo"
+  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-52 w-52 z-10"
+/>
+
+
+
+
+     
 
       <div
         className={`p-8 flex flex-col items-center justify-center duration-500 w-full ${
@@ -45,13 +49,10 @@ const HeroSection = ({ isMenuShown }) => {
           Automate <span className="text-thBlue font-bold">College Venue</span> permissions
         </h1>
 
-        <div className="flex flex-row justify-center items-center">
         
-          <GradientBtn className="capitalize mx-12" title="Log in" />
-        </div>
       </div>
     </div>
   );
 };
 
-export default HeroSection;
+export default Home;
